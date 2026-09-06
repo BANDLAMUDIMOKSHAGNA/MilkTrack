@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MilkTrack</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="image/logo3.jpg">
+    <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caprasimo&family=Chango&family=Monoton&family=Oleo+Script:wght@400;700&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap"
+    media="print"
+    onload="this.media='all'"
+  >
+    <noscript>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Caprasimo&family=Chango&family=Monoton&family=Oleo+Script:wght@400;700&family=Playwrite+CU+Guides&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Sofia&display=swap"
+    >
+  </noscript>
+    <style>
+        #hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: start;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  transform: translate(-50%, -50%);
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.08)
+  );
+  z-index: 1;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 30px;
+  color: white;
+}
+
+    </style>
 </head>
 <body>
     <div class="top-container">
@@ -27,48 +85,69 @@
         </div>
     </div>
     <section id="hero">
-        <div class="hero-content">>
-            <h3>  Pure.Fresh.Healthy  </h3>
-            <h1>Milk Track</h1>
-            <h2>Delivered to Your Doorstep</h2>
-            <p>Experience the taste of pure, fresh milk <br>delivered right to your doorstep.</p>
-            <nav>
-                <button class="btn1">Order Now</button>
+        <video
+  class="hero-video"
+  autoplay
+  muted
+  loop
+  playsinline
+  poster="assets/dairy-hero-poster.webp"
+>
+  <source src="/image/Jersey_cow_website_hero_animation_202608091131.mp4" type="video/mp4">
+</video>
+<div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            
+            <h3>Pure.Fresh.Healthy  </h3>
+            <br>
+            <h1>Milk<em>Track <i class="ph-fill ph-cow"></i></em></h1>
+            <br>
+            <p >Experience pure, fresh milk delivered straight to your doorstep. Fresh from the farm, naturally rich, and full of goodness.</p>
+            <div class="cta">
+                <button class="btn1">Order Now </button>
                 <button class="btn">View Products</button>
-            </nav>
+            </div>
+            <div class="info">
+            <span >Delivered to Your Doorstep <i class="ph ph-door"></i></span>
+            </div>
         </div>
     </section>
     <section id="details">
         <div class="feature">
-            <img src="image/1.jpg" alt="100% fresh" width="50px" height="50px">
+            <img src="image/1.jpg" alt="100% fresh" width="50px" height="50px"
+            class="fimg">
             <div class="text">
                 <h5>100% Fresh Milk</h5>
                 <p style="font-size:10px;">Pure & unadultrated Milk<br>from healthy cows.</p>
             </div>
         </div>
         <div class="feature">
-            <img src="image/2.jpg" alt="Farm Fresh" width="50px" height="50px">
-            <div classs="text">
+            <img src="image/2.jpg" alt="Farm Fresh" width="50px" height="50px" class="fimg">
+            <div class="text">
                 <h4>Farm Fresh</h4>
                 <p style="font-size:10px;">Sourced directly from <br>our own dairy farm.</p>
             </div>
         </div>
         <div class="feature">
-            <img src="image/3.jpg" alt="delivery" width="50px" height="50px">
+            <img src="image/3.jpg" alt="delivery" width="50px" height="50px"
+            class="fimg">
             <div class="text">
                 <h4>Daily Delivery</h4>
                 <p style="font-size:10px;">one-time delivery to your<br>doorstep every day.</p>
             </div>
         </div>
         <div class="feature">
-            <img src="image/4.jpg" alt="hygienic" width="50px" height="50px">
+            <img src="image/4.jpg" alt="hygienic" width="50px" height="50px"
+            class="fimg">
             <div class="text">
                 <h4>Hygienic Process</h4>
                 <p style="font-size:10px;">Processed in a clean and<br> hygienic environment.</p>
             </div>
         </div>
         <div class="feature">
-            <img src="image/5.jpg" alt="prices" width="50px" height="50px">
+            <img src="image/5.jpg" alt="prices" width="50px" height="50px"
+            class="fimg">
             <div class="text">
                 <h4>Affordable Prices</h4>
                 <p style="font-size:10px;">Best quality products at<br>affordable prices.</p>
@@ -121,24 +200,20 @@
     </div>
     <br>
     <div class="feedback">
-        <img src="image/glass.jpg" alt="Feedback" width="160px" height="100px" style="padding:0px;">
-        <div>
-            <h3 style="text-align: center;">Why Choose Us?</h3>
+        <img src="image/glass.jpg" alt="Feedback" width="160px" height="100px" style="padding:0px;" class="fimg2">
+        <div class="feedback-content">
+            <h2 style="text-align: start;margin-left: 24px;margin-bottom: -14px;" class="feedback-heading">Why Choose Us?</h2>
             <div class="list">
-                <ul
-                    <li style="list-style:none;">100% Pure & Natural</li>
-                    <li style="list-style:none;">No Preservatives</li>
-                    <li style="list-style:none;">Quality Tested</li>
-                </ul>
-                <ul>
-                    <li style="list-style:none;">Hygienic Packing</li>
-                    <li style="list-style:none;">Trained Professionals</li>
-                    <li style="list-style:none;">Customer Satisfaction</li>
+                <ul style="list-style:none;">
+                    <li class="list-heading"><h4>100% Natural Goodness</h4></li><li class="list-content">
+Pure dairy goodness with a focus on quality, freshness, and natural taste.</li>
+ <li class="list-heading"><h4>Quality You Can Feel</h4></li><li class="list-content">
+We carefully maintain hygiene and quality at every stage—from collection to delivery.</li>
                 </ul>
             </div>
         </div>
-        <div>
-            <h3 style="text-align: center;">Our Services</h3>
+        <div class="feedback-content">
+            <h2 class="feedback-heading">Our Services</h2>
             <div class="list">
                 <ul>
                     <li style="list-style:none;">Daily milk delivery</li>
@@ -189,6 +264,6 @@
             <span style="font-size: 8px;">Connect with us on social media!</span>
         </div>
     </div>
-
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
 </body>
 </html>
